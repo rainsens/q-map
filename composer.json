@@ -1,0 +1,30 @@
+{
+    "name": "rainsens/q-map",
+    "description": "QQ map sdk",
+    "authors": [
+        {
+            "name": "rainsen",
+            "email": "yusen@rainsen.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rainsens\\QMap\\": "./src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rainsens\\QMap\\Providers\\ServiceProvider"
+            ],
+            "aliases": {
+                "QMap": "Rainsens\\QMap\\Facades\\QMap"
+            }
+        }
+    }
+}
