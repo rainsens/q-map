@@ -52,7 +52,7 @@ class Region extends Base implements RegionInterface
 	 * @return array
 	 * @throws HttpException
 	 */
-	public function children(string $id = ''): array
+	public function children(string $id = null): array
 	{
 		$query = ['key' => $this->key, 'id' => $id];
 		try {
@@ -69,7 +69,7 @@ class Region extends Base implements RegionInterface
 	 * @return array
 	 * @throws HttpException
 	 */
-	public function search(string $keywords = ''): array
+	public function search(string $keywords = null): array
 	{
 		$query = explode(',', $keywords);
 		$query['key'] = $this->key;
