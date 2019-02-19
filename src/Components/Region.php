@@ -55,6 +55,7 @@ class Region extends Base implements RegionInterface
 	public function children(string $id = null): array
 	{
 		$query = ['key' => $this->key, 'id' => $id];
+		
 		try {
 			$response = $this->getHttpClient()->get($this->childrenUrl, ['query' => $query])->getBody()->getContents();
 			return json_decode($response, true);
@@ -73,6 +74,7 @@ class Region extends Base implements RegionInterface
 	{
 		$query = explode(',', $keywords);
 		$query['key'] = $this->key;
+		
 		try {
 			$response = $this->getHttpClient()->get($this->searchUrl, ['query' => $query])->getBody()->getContents();
 			return json_decode($response, true);
