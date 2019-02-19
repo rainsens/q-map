@@ -12,11 +12,11 @@ interface RegionInterface
 	 * @param string $id
 	 * @return array
 	 */
-	public function children(string $id = null): array;
+	public function children(string $id = ''): array;
 	
 	/**
 	 * @param string $keywords
 	 * @return array
 	 */
-	public function search(string $keywords = null): array;
+	public function search(string $keywords = ''): array;
 }
