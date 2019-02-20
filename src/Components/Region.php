@@ -72,8 +72,8 @@ class Region extends Base implements RegionInterface
 	 */
 	public function search(string $keywords = null): array
 	{
-		$query = explode(',', $keywords);
 		$query['key'] = $this->key;
+		$query['keyword'] = $keywords;
 		
 		try {
 			$response = $this->getHttpClient()->get($this->searchUrl, ['query' => $query])->getBody()->getContents();

@@ -1,6 +1,7 @@
 {
     "name": "rainsens/q-map",
     "description": "QQ map sdk",
+    "license": "MIT",
     "authors": [
         {
             "name": "rainsen",
