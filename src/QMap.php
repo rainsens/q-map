@@ -1,6 +1,7 @@
 <?php
 namespace Rainsens\QMap;
 
+use Rainsens\QMap\Components\GeoCoder;
 use Rainsens\QMap\Components\Region;
 
 class QMap
@@ -27,5 +28,13 @@ class QMap
 	public function region()
     {
     	return new Region($this->key);
+	}
+	
+	/**
+	 * @return GeoCoder
+	 */
+	public function geoCoder()
+	{
+		return new GeoCoder($this->key);
 	}
 }
